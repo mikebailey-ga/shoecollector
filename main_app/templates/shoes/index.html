@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Cat List</h1>
+
+{% for shoe in shoes %}
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ shoe.name }}</span>
+            <p>Brand: {{ shoe.brand }}</p>
+            <p>Description: {{ shoe.description }}</p>
+
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}
