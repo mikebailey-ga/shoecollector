@@ -5,12 +5,13 @@
 
 {% for shoe in shoes %}
     <div class="card">
+        <a href="/shoes/{{ shoe.id }}">
         <div class="card-content">
             <span class="card-title">{{ shoe.name }}</span>
             <p>Brand: {{ shoe.brand }}</p>
             <p>Description: {{ shoe.description }}</p>
-
         </div>
+        </a>
     </div>
 {% endfor %}
 
