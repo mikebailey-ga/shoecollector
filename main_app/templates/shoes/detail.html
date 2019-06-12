@@ -10,6 +10,10 @@
     <p>Color: {{ shoe.color }}</p>
     <p>Description: {{ shoe.description }}</p>
   </div>
+  <div class="card-action">
+    <a href="{% url 'shoes_update' shoe.id %}">Edit</a>
+    <a href="{% url 'shoes_delete' shoe.id %}">Delete</a>
+  </div>
 </div>
 
 {% endblock %}

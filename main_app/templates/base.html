@@ -1,4 +1,5 @@
 {% load static %}
+{% load sass_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +10,7 @@
     <title>Shoe Collector</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    
 </head>
 <body>
     <header class="navbar-fixed">
@@ -18,8 +20,9 @@
                     <li><a href="/" class="left brand-logo">&nbsp;&nbsp;ShoeCollector</a></li>
                 </ul>
                 <ul class="right">
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/shoes">List My Shoes</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'shoes_create' %}">Add Shoes</a></li>
+                    <li><a href="{% url 'index' %}">List My Shoes</a></li>
                 </ul>
             </div>
         </nav>
