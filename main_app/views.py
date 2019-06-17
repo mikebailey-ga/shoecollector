@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Shoe
+from .forms import WearingsForm
 # Create your views here.
 
 class ShoeCreate(CreateView):
@@ -28,6 +29,7 @@ def shoes_index(request):
 
 def shoes_detail(request, shoe_id):
     shoe = Shoe.objects.get(id=shoe_id)
-    return render(request, 'shoes/detail.html', {'shoe': shoe})
+    wearings_form = WearingsForm()
+    return render(request, 'shoes/detail.html', {'shoe': shoe, 'wearings_form': wearings_form})
 
     
